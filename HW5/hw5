@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void replace_all(char *str, char oldChar, char newChar) {
+    int i = 0;
+    while (str[i] != '\0') {
+        // 檢查當前字符是否為小寫'a'，若是，則替換為大寫'A'
+        if (str[i] == oldChar) {
+            if (oldChar == 'a') {
+                str[i] = 'A';
+            } 
+          	else {
+                str[i] = newChar;
+            }
+        }
+        i++;
+    }
+}
+
+int main() {
+    char str[100], oldChar = 'a', newChar = 'A';
+    
+    scanf("%s", str);
+    
+    replace_all(str, oldChar, newChar);
+    
+    printf("%s", str);
+    
+    return 0;
+}
